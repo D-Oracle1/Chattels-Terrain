@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0b1f35;
+    /* Font stacks — backed by self-hosted @fontsource families. */
+    --font-playfair: "Playfair Display", Georgia, serif;
+    --font-cormorant: "Cormorant Garamond", Georgia, serif;
+    --font-inter: "Inter", system-ui, sans-serif;
+    --font-manrope: "Manrope", system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: #050f1c;
+    --foreground: #f4f5f7;
+  }
+
+  * {
+    @apply border-gold-100/40 dark:border-white/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-body antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-navy;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .container-luxe {
+    @apply container max-w-8xl;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-gold-500 dark:text-gold-300;
+  }
+
+  .heading-xl {
+    @apply font-heading text-4xl leading-[1.08] sm:text-5xl lg:text-6xl;
+  }
+
+  .heading-lg {
+    @apply font-heading text-3xl leading-[1.1] sm:text-4xl lg:text-5xl;
+  }
+
+  .lede {
+    @apply text-lg leading-relaxed text-charcoal/70 dark:text-light-grey/70;
+  }
+
+  .gold-rule {
+    @apply h-px w-16 bg-gold-sheen;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/60 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-white/[0.04];
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(
+        to right,
+        rgba(200, 169, 107, 0.08) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(200, 169, 107, 0.08) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
