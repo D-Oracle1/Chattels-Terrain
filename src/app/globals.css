@@ -6,11 +6,11 @@
   :root {
     --background: #ffffff;
     --foreground: #0b1f35;
-    /* Font stacks — backed by self-hosted @fontsource families. */
-    --font-playfair: "Playfair Display", Georgia, serif;
-    --font-cormorant: "Cormorant Garamond", Georgia, serif;
-    --font-inter: "Inter", system-ui, sans-serif;
-    --font-manrope: "Manrope", system-ui, sans-serif;
+    /* Font stacks — all backed by self-hosted Montserrat. */
+    --font-playfair: "Montserrat", system-ui, sans-serif;
+    --font-cormorant: "Montserrat", system-ui, sans-serif;
+    --font-inter: "Montserrat", system-ui, sans-serif;
+    --font-manrope: "Montserrat", system-ui, sans-serif;
   }
 
   .dark {

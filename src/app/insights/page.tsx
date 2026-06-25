@@ -6,7 +6,7 @@ import { CTA } from "@/components/sections/cta";
 export const metadata: Metadata = {
   title: "Insights & Resources",
   description:
-    "Property investment, land development, market trends, construction insights and industry news from the Chattels Terrain team.",
+    "Edinburgh market analysis, serviced apartment investment strategy and investor guides from the Chattels Terrain team.",
 };
 
 export default function InsightsPage() {
@@ -15,8 +15,8 @@ export default function InsightsPage() {
       <PageHero
         eyebrow="Insights & Resources"
         title="Intelligence for the discerning investor"
-        description="Market analysis, development thinking and industry news from our specialists."
-        image="https://images.unsplash.com/photo-1460472178825-e5240623afd5?auto=format&fit=crop&w=1920&q=80"
+        description="Edinburgh market analysis, serviced-apartment strategy and investor guides from our specialists."
+        image="https://images.unsplash.com/photo-1506377585622-bedcbb027afc?auto=format&fit=crop&w=1920&q=80"
       />
       <section className="py-24 lg:py-28">
         <div className="container-luxe">

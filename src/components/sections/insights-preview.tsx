@@ -16,7 +16,7 @@ export function InsightsPreview() {
             align="left"
             eyebrow="Insights & Resources"
             title="Intelligence for the discerning investor"
-            description="Market analysis, development thinking and industry news from our specialists."
+            description="Edinburgh market analysis, serviced-apartment strategy and investor guides from our specialists."
             className="max-w-xl"
           />
           <Button href="/insights" variant="outline" className="shrink-0">

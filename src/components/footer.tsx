@@ -2,15 +2,22 @@ import Link from "next/link";
 import { Linkedin, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { siteConfig, navigation } from "@/lib/site";
-import { services } from "@/lib/data";
-import { Newsletter } from "@/components/newsletter";
+
+const investorResources = [
+  { label: "Investment Opportunities", href: "/projects" },
+  { label: "How We Work", href: "/services" },
+  { label: "Register as an Investor", href: "/investment#register" },
+  { label: "Schedule a Consultation", href: "/contact" },
+  { label: "Insights & Resources", href: "/insights" },
+];
 
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy-950 text-light-grey">
       <div className="bg-grid absolute inset-0 opacity-40" aria-hidden />
       <div className="container-luxe relative">
-        <div className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+          {/* Company Overview */}
           <div>
             <Logo light />
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-light-grey/65">
@@ -29,7 +36,8 @@ export function Footer() {
             </div>
           </div>
 
-          <FooterColumn title="Company">
+          {/* Quick Links */}
+          <FooterColumn title="Quick Links">
             {navigation.map((item) => (
               <FooterLink key={item.href} href={item.href}>
                 {item.label}
@@ -37,44 +45,51 @@ export function Footer() {
             ))}
           </FooterColumn>
 
-          <FooterColumn title="Services">
-            {services.slice(0, 6).map((s) => (
-              <FooterLink key={s.slug} href={`/services#${s.slug}`}>
-                {s.title}
+          {/* Investor Resources */}
+          <FooterColumn title="Investor Resources">
+            {investorResources.map((item) => (
+              <FooterLink key={item.href} href={item.href}>
+                {item.label}
               </FooterLink>
             ))}
           </FooterColumn>
 
+          {/* Contact Information */}
           <div>
-            <h4 className="font-heading text-lg text-white">Stay informed</h4>
-            <p className="mt-3 text-sm text-light-grey/65">
-              Investment opportunities and market insights, delivered quarterly.
-            </p>
-            <div className="mt-5">
-              <Newsletter />
-            </div>
-            <ul className="mt-6 space-y-3 text-sm text-light-grey/70">
-              <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 text-gold-300" />
-                <span>
-                  {siteConfig.address.line1}, {siteConfig.address.city}{" "}
-                  {siteConfig.address.postcode}
-                </span>
-              </li>
+            <h4 className="font-heading text-lg text-white">Contact Information</h4>
+            <ul className="mt-5 space-y-3 text-sm text-light-grey/70">
               <li className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-gold-300" />
+                <Phone className="h-4 w-4 shrink-0 text-gold-300" />
                 <a href={siteConfig.phoneHref} className="hover:text-gold-300">
                   {siteConfig.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="h-4 w-4 text-gold-300" />
+                <Phone className="h-4 w-4 shrink-0 text-gold-300" />
                 <a
-                  href={`mailto:${siteConfig.email}`}
+                  href={siteConfig.phoneSecondaryHref}
                   className="hover:text-gold-300"
                 >
-                  {siteConfig.email}
+                  {siteConfig.phoneSecondary}
                 </a>
+              </li>
+              {siteConfig.emails.map((e) => (
+                <li key={e.address} className="flex items-center gap-3">
+                  <Mail className="h-4 w-4 shrink-0 text-gold-300" />
+                  <a
+                    href={`mailto:${e.address}`}
+                    className="break-all hover:text-gold-300"
+                  >
+                    {e.address}
+                  </a>
+                </li>
+              ))}
+              <li className="flex items-start gap-3 pt-1">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-300" />
+                <span>
+                  {siteConfig.address.city}, {siteConfig.address.region},{" "}
+                  {siteConfig.address.country}
+                </span>
               </li>
             </ul>
           </div>
@@ -82,9 +97,9 @@ export function Footer() {
 
         <div className="flex flex-col gap-4 py-8 text-xs text-light-grey/55 md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {siteConfig.legalName}. Registered in
-            England &amp; Wales No. {siteConfig.companyNumber}. VAT{" "}
-            {siteConfig.vatNumber}.
+            © {new Date().getFullYear()} {siteConfig.legalName}. An
+            Edinburgh-based property portfolio and investment sourcing company.
+            Company No. {siteConfig.companyNumber}.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <Link href="/privacy" className="hover:text-gold-300">

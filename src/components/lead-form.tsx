@@ -74,10 +74,9 @@ export function LeadForm({ variant = "consultation" }: { variant?: Variant }) {
             How can we help?
           </option>
           <option>Schedule a consultation</option>
-          <option>Land acquisition</option>
-          <option>Property development</option>
-          <option>Construction management</option>
-          <option>Investment opportunities</option>
+          <option>Serviced apartment opportunities</option>
+          <option>Investment enquiry</option>
+          <option>Investor registration</option>
           <option>General enquiry</option>
         </select>
       )}

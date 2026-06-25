@@ -35,7 +35,7 @@ export function Navbar() {
       )}
     >
       <nav className="container-luxe flex items-center justify-between">
-        <Logo light={!scrolled || true} />
+        <Logo light />
 
         <div className="hidden items-center gap-8 lg:flex">
           {navigation.map((item) => {

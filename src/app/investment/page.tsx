@@ -10,25 +10,25 @@ import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Investment Opportunities",
+  title: "Invest",
   description:
-    "Discover current UK real estate investment opportunities with Chattels Terrain — projected returns, downloadable prospectus and investor registration.",
+    "Discover current Edinburgh serviced apartment investment opportunities with Chattels Terrain — projected net yields, full documentation and investor registration.",
 };
 
 const steps = [
-  { icon: FileText, title: "Register", text: "Create your investor profile and access the deal room." },
+  { icon: FileText, title: "Register", text: "Create your investor profile and tell us your goals." },
   { icon: PieChart, title: "Review", text: "Explore opportunities, projections and full documentation." },
-  { icon: ShieldCheck, title: "Commit", text: "Invest securely with transparent, FCA-aligned structures." },
+  { icon: ShieldCheck, title: "Commit", text: "Secure your serviced apartment investment with complete transparency." },
 ];
 
 export default function InvestmentPage() {
   return (
     <>
       <PageHero
-        eyebrow="Investor Relations"
-        title="Strategic real estate investment, built on transparency"
-        description="Access institutional-grade UK developments with clear terms, projected returns and rigorous governance."
-        image="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80"
+        eyebrow="Investor Opportunity"
+        title="Build wealth through Edinburgh serviced apartments"
+        description="Access carefully selected, high-yield serviced apartment opportunities with clear terms, projected net yields and full transparency."
+        image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1920&q=80"
       />
 
       {/* Dashboard-style opportunities */}
@@ -38,8 +38,8 @@ export default function InvestmentPage() {
             <SectionHeading
               align="left"
               eyebrow="Current Opportunities"
-              title="Open investment opportunities"
-              description="Live developments accepting capital from qualified investors."
+              title="Open serviced apartment opportunities"
+              description="Carefully selected Edinburgh apartments currently open to investors."
               className="max-w-xl"
             />
             <Button href="/contact" variant="gold" className="shrink-0">
@@ -99,7 +99,7 @@ export default function InvestmentPage() {
       </section>
 
       {/* Investor registration */}
-      <section className="bg-navy-950 py-24 text-white lg:py-32">
+      <section id="register" className="scroll-mt-24 bg-navy-950 py-24 text-white lg:py-32">
         <div className="container-luxe grid items-center gap-16 lg:grid-cols-2">
           <div>
             <span className="eyebrow">
@@ -109,15 +109,15 @@ export default function InvestmentPage() {
               Join our community of investors
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-light-grey/70">
-              Register to access our private deal room, downloadable investment
-              prospectus and early notification of new opportunities.
+              Register to receive early notification of new serviced apartment
+              opportunities, full documentation and priority access.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-light-grey/70">
               {[
-                "Priority access to new developments",
+                "Priority access to new opportunities",
                 "Detailed financial models and documentation",
-                "Quarterly performance reporting",
-                "Dedicated investor relations contact",
+                "Clear performance reporting",
+                "A dedicated investor relations contact",
               ].map((b) => (
                 <li key={b} className="flex items-center gap-3">
                   <ShieldCheck className="h-5 w-5 text-gold-300" /> {b}

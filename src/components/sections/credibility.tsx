@@ -9,7 +9,7 @@ export function Credibility() {
       <div className="container-luxe">
         <Reveal>
           <p className="text-center text-xs font-semibold uppercase tracking-[0.28em] text-charcoal/45 dark:text-light-grey/45">
-            Accredited, regulated and recognised
+            Informed by the market&apos;s leading names
           </p>
         </Reveal>
 
@@ -30,7 +30,7 @@ export function Credibility() {
               <BadgeCheck className="h-8 w-8 shrink-0 text-gold-500" />
               <div>
                 <h3 className="font-heading text-lg text-navy dark:text-white">
-                  Certifications
+                  How We Work
                 </h3>
                 <p className="mt-2 text-sm text-charcoal/60 dark:text-light-grey/55">
                   {certifications.join(" · ")}
@@ -43,7 +43,7 @@ export function Credibility() {
               <Award className="h-8 w-8 shrink-0 text-gold-500" />
               <div>
                 <h3 className="font-heading text-lg text-navy dark:text-white">
-                  Recent Awards
+                  Our Focus
                 </h3>
                 <ul className="mt-2 space-y-1 text-sm text-charcoal/60 dark:text-light-grey/55">
                   {awards.map((a) => (
@@ -63,9 +63,9 @@ export function Credibility() {
                   Registered Company
                 </h3>
                 <p className="mt-2 text-sm text-charcoal/60 dark:text-light-grey/55">
-                  {siteConfig.legalName}, registered in England &amp; Wales No.{" "}
-                  {siteConfig.companyNumber}. RICS regulated. Member of the UK
-                  Green Building Council.
+                  {siteConfig.legalName}, an Edinburgh-based property portfolio
+                  and investment sourcing company. Company No.{" "}
+                  {siteConfig.companyNumber}.
                 </p>
               </div>
             </div>

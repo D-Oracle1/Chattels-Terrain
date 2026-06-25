@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${siteConfig.legalName} — Property Development & Investment`,
+    name: `${siteConfig.legalName} — Edinburgh Serviced Apartment Investment`,
     short_name: siteConfig.name,
     description: siteConfig.description,
     start_url: "/",

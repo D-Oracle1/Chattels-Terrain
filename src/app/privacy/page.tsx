@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     h: "Who we are",
-    p: `${siteConfig.legalName} ("we", "us") is a property development and investment company registered in England & Wales (No. ${siteConfig.companyNumber}). We are the data controller for personal data collected through this website.`,
+    p: `${siteConfig.legalName} ("we", "us") is an Edinburgh-based property portfolio and investment sourcing company (Company No. ${siteConfig.companyNumber}). We are the data controller for personal data collected through this website.`,
   },
   {
     h: "Information we collect",

@@ -5,9 +5,9 @@ import type { Project } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const statusStyles: Record<Project["status"], string> = {
-  Completed: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300",
-  "In Progress": "bg-gold-200/40 text-gold-600 dark:text-gold-300",
-  Upcoming: "bg-navy-100/60 text-navy-700 dark:bg-white/10 dark:text-light-grey",
+  Available: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300",
+  Funding: "bg-gold-200/40 text-gold-600 dark:text-gold-300",
+  "Coming Soon": "bg-navy-100/60 text-navy-700 dark:bg-white/10 dark:text-light-grey",
 };
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -54,9 +54,9 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.scope}
         </p>
         <dl className="mt-5 grid grid-cols-3 gap-3 border-t border-gold-100/50 pt-5 dark:border-white/10">
-          <Stat label="Value" value={project.value} />
-          <Stat label="Target ROI" value={project.roi} />
-          <Stat label="Timeline" value={project.timeline.split(" – ")[1] ?? project.timeline} />
+          <Stat label="Price" value={project.value} />
+          <Stat label="Net yield" value={project.roi} />
+          <Stat label="Availability" value={project.timeline.split(" – ")[1] ?? project.timeline} />
         </dl>
       </div>
     </Link>

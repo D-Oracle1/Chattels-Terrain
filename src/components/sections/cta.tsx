@@ -4,8 +4,8 @@ import { Reveal } from "@/components/reveal";
 import { siteConfig } from "@/lib/site";
 
 export function CTA({
-  title = "Ready to build your legacy?",
-  description = "Speak with our investment team about current opportunities or book a private consultation.",
+  title = "Ready to build your Edinburgh portfolio?",
+  description = "Speak with our team about current serviced apartment opportunities or book a private consultation.",
 }: {
   title?: string;
   description?: string;

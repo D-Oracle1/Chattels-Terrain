@@ -14,7 +14,7 @@ export function Hero() {
         muted
         loop
         playsInline
-        poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+        poster="https://images.unsplash.com/photo-1506377585622-bedcbb027afc?auto=format&fit=crop&w=1920&q=80"
       >
         <source
           src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-city-3633/1080p.mp4"
@@ -36,7 +36,7 @@ export function Hero() {
           className="eyebrow"
         >
           <span className="gold-rule inline-block" />
-          Chattels Terrain Ltd · United Kingdom
+          Edinburgh Property Investment Sourcing
         </motion.span>
 
         <motion.h1
@@ -45,9 +45,9 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.1 }}
           className="heading-xl mt-6 max-w-4xl text-balance text-white"
         >
-          Transforming Land Into{" "}
+          High-Yield Serviced Apartment Investments in{" "}
           <span className="bg-gold-sheen bg-clip-text text-transparent">
-            Legacy
+            Edinburgh
           </span>
         </motion.h1>
 
@@ -57,8 +57,9 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.25 }}
           className="mt-6 max-w-2xl text-lg leading-relaxed text-light-grey/80"
         >
-          Premium property development, strategic land acquisition, construction
-          excellence and investment opportunities across the United Kingdom.
+          We help investors identify, package and secure carefully selected
+          serviced apartment opportunities in one of the UK&apos;s most resilient
+          property markets.
         </motion.p>
 
         <motion.div
@@ -68,14 +69,14 @@ export function Hero() {
           className="mt-10 flex flex-col gap-4 sm:flex-row"
         >
           <Button href="/projects" variant="gold" size="lg">
-            Explore Projects <ArrowRight className="h-4 w-4" />
+            View Opportunities <ArrowRight className="h-4 w-4" />
           </Button>
           <Button
             href="/contact"
             size="lg"
             className="border border-white/30 bg-white/5 text-white backdrop-blur hover:border-gold hover:text-gold-300"
           >
-            <PlayCircle className="h-5 w-5" /> Schedule Consultation
+            <PlayCircle className="h-5 w-5" /> Schedule a Consultation
           </Button>
         </motion.div>
 
@@ -86,15 +87,18 @@ export function Hero() {
           className="mt-16 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm text-light-grey/60"
         >
           <span className="text-xs uppercase tracking-[0.28em] text-light-grey/45">
-            Trusted by
+            Investor-first focus
           </span>
-          {["Knight Frank", "Savills", "Arup", "Mace", "Lloyds Bank"].map(
-            (p) => (
-              <span key={p} className="font-heading text-base text-light-grey/75">
-                {p}
-              </span>
-            ),
-          )}
+          {[
+            "Market Research",
+            "Due Diligence",
+            "Investment Packaging",
+            "Portfolio Growth",
+          ].map((p) => (
+            <span key={p} className="font-heading text-base text-light-grey/75">
+              {p}
+            </span>
+          ))}
         </motion.div>
       </div>
 

@@ -7,10 +7,10 @@ import { projects, type Project } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 /**
- * Lightweight interactive map. UK lat/lng are projected onto a stylised
+ * Lightweight interactive map. Edinburgh lat/lng are projected onto a stylised
  * panel — no external tile dependency, so it stays fast and offline-safe.
  */
-const BOUNDS = { minLat: 50.0, maxLat: 55.0, minLng: -3.6, maxLng: 0.4 };
+const BOUNDS = { minLat: 55.93, maxLat: 55.99, minLng: -3.25, maxLng: -3.12 };
 
 function project(p: Project) {
   const x = ((p.lng - BOUNDS.minLng) / (BOUNDS.maxLng - BOUNDS.minLng)) * 100;
@@ -19,9 +19,9 @@ function project(p: Project) {
 }
 
 const statusColor: Record<Project["status"], string> = {
-  Completed: "bg-emerald-400",
-  "In Progress": "bg-gold-400",
-  Upcoming: "bg-sky-400",
+  Available: "bg-emerald-400",
+  Funding: "bg-gold-400",
+  "Coming Soon": "bg-sky-400",
 };
 
 export function ProjectsMap() {
@@ -69,7 +69,7 @@ export function ProjectsMap() {
         })}
 
         <div className="absolute bottom-4 left-4 flex gap-4 rounded-full bg-navy-950/80 px-4 py-2 text-xs text-light-grey/70 backdrop-blur">
-          {(["Completed", "In Progress", "Upcoming"] as const).map((s) => (
+          {(["Available", "Funding", "Coming Soon"] as const).map((s) => (
             <span key={s} className="flex items-center gap-1.5">
               <span className={cn("h-2.5 w-2.5 rounded-full", statusColor[s])} />
               {s}
@@ -99,19 +99,19 @@ export function ProjectsMap() {
         </p>
         <dl className="mt-6 grid grid-cols-3 gap-4 border-t border-gold-100/50 pt-6 dark:border-white/10">
           <div>
-            <dt className="text-xs text-charcoal/50 dark:text-light-grey/45">Value</dt>
+            <dt className="text-xs text-charcoal/50 dark:text-light-grey/45">Price</dt>
             <dd className="font-heading text-lg text-navy dark:text-white">
               {active.value}
             </dd>
           </div>
           <div>
-            <dt className="text-xs text-charcoal/50 dark:text-light-grey/45">ROI</dt>
+            <dt className="text-xs text-charcoal/50 dark:text-light-grey/45">Net yield</dt>
             <dd className="font-heading text-lg text-navy dark:text-white">
               {active.roi}
             </dd>
           </div>
           <div>
-            <dt className="text-xs text-charcoal/50 dark:text-light-grey/45">Timeline</dt>
+            <dt className="text-xs text-charcoal/50 dark:text-light-grey/45">Available</dt>
             <dd className="font-heading text-lg text-navy dark:text-white">
               {active.timeline}
             </dd>

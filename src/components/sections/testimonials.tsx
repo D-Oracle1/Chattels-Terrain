@@ -27,9 +27,9 @@ export function Testimonials() {
     <section className="bg-light-grey py-24 dark:bg-navy-900 lg:py-32">
       <div className="container-luxe">
         <SectionHeading
-          eyebrow="Client Success"
-          title="Trusted by investors, landowners and partners"
-          description="Real outcomes from the people who have built and grown wealth alongside us."
+          eyebrow="Investor Success"
+          title="Trusted by investors building Edinburgh portfolios"
+          description="Real outcomes from the people who have grown their property wealth alongside us."
         />
 
         <div className="mx-auto mt-16 max-w-3xl">

@@ -39,8 +39,8 @@ const config: Config = {
         "light-grey": "#F4F5F7",
       },
       fontFamily: {
-        heading: ["var(--font-playfair)", "Georgia", "serif"],
-        serif: ["var(--font-cormorant)", "Georgia", "serif"],
+        heading: ["var(--font-playfair)", "system-ui", "sans-serif"],
+        serif: ["var(--font-cormorant)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         body: ["var(--font-manrope)", "system-ui", "sans-serif"],
       },

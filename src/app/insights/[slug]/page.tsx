@@ -28,10 +28,10 @@ export async function generateMetadata({
 }
 
 const body = [
-  "The United Kingdom's property market continues to reward investors who combine patience with disciplined site selection. As infrastructure investment reshapes regional connectivity, the gap between prime and secondary locations is being redrawn — and with it, the opportunity set.",
-  "At Chattels Terrain, our approach begins with fundamentals: demographics, employment, transport and planning trajectory. We underwrite conservatively, stress-test every assumption and only proceed where the margin of safety is clear. It is an unglamorous discipline, but it is the foundation of durable returns.",
-  "Sustainability is no longer a premium feature — it is a baseline expectation that protects long-term value. BREEAM-aligned design, net-zero operational targets and genuine community benefit are now central to occupier demand, lending appetite and exit valuations alike.",
-  "For investors, the message is simple. The strongest risk-adjusted returns will accrue to those backing experienced developers with transparent governance, strong local relationships and the patience to build through the cycle rather than around it.",
+  "Edinburgh remains one of the UK's most resilient property markets — and few asset classes capture that resilience as well as professionally run serviced apartments. A rare combination of tourism, business travel, a vast student population and a year-round events calendar keeps quality short-stay accommodation in consistent demand.",
+  "At Chattels Terrain, our approach begins with fundamentals: location, demand drivers, achievable nightly rates and occupancy. We assess every opportunity against clear yield criteria, complete rigorous due diligence and only present properties where the case for investment is genuinely compelling.",
+  "Serviced apartments can meaningfully outperform traditional buy-to-let on net yield, but they reward careful selection. The right street, the right layout and the right operating model make the difference between an average return and a strong one — which is exactly where specialist sourcing earns its place.",
+  "For investors, the message is simple. The strongest risk-adjusted returns accrue to those who partner with a sourcing specialist offering transparent analysis, deep local knowledge and genuine, long-term support as a portfolio grows.",
 ];
 
 export default async function ArticlePage({
@@ -121,7 +121,10 @@ export default async function ArticlePage({
         </div>
       </section>
 
-      <CTA />
+      <CTA
+        title="Ready to explore Edinburgh opportunities?"
+        description="Speak with our team about current serviced apartment opportunities or book a private consultation."
+      />
     </>
   );
 }

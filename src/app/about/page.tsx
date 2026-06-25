@@ -12,7 +12,7 @@ import { AnimatedCounter } from "@/components/animated-counter";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Discover the mission, vision, values and leadership behind Chattels Terrain Ltd — a premium UK property development and investment company.",
+    "Discover the mission, vision, values and team behind Chattels Terrain Ltd — an Edinburgh-based property portfolio and investment sourcing company.",
 };
 
 export default function AboutPage() {
@@ -20,9 +20,9 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Chattels Terrain"
-        title="Building places of lasting value and enduring returns"
-        description="For nearly two decades we have transformed land into thriving communities and dependable investments across the United Kingdom."
-        image="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1920&q=80"
+        title="An Edinburgh specialist in serviced apartment investment"
+        description="We help investors identify, package and secure high-yield serviced apartment opportunities in one of the UK's most resilient property markets."
+        image="https://images.unsplash.com/photo-1506377585622-bedcbb027afc?auto=format&fit=crop&w=1920&q=80"
       />
 
       {/* Story */}
@@ -31,8 +31,8 @@ export default function AboutPage() {
           <Reveal>
             <div className="relative aspect-[5/4] overflow-hidden rounded-3xl shadow-luxe">
               <Image
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
-                alt="Chattels Terrain"
+                src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1000&q=80"
+                alt="Premium serviced apartment living space"
                 fill
                 sizes="(max-width:1024px) 100vw, 50vw"
                 className="object-cover"
@@ -48,17 +48,16 @@ export default function AboutPage() {
             </h2>
             <div className="lede mt-6 space-y-5">
               <p>
-                Founded on a simple conviction — that land, developed with
-                discipline and care, is the most reliable engine of long-term
-                wealth — Chattels Terrain has grown into one of the UK&apos;s most
-                trusted independent developers.
+                Founded on a simple conviction — that Edinburgh&apos;s serviced
+                apartment market offers some of the most resilient, high-yield
+                opportunities in UK property — Chattels Terrain helps investors
+                access them with confidence.
               </p>
               <p>
-                We combine institutional rigour with a genuine partnership
-                ethos. Every project is underwritten conservatively, delivered
-                to the highest standard and reported with complete transparency.
-                The result is a portfolio our investors trust through every phase
-                of the property cycle.
+                We are not developers or estate agents. We are a sourcing and
+                advisory partner: researching the market, identifying the right
+                apartments, completing rigorous due diligence and packaging each
+                opportunity so you can invest with total clarity.
               </p>
             </div>
           </div>
@@ -72,8 +71,8 @@ export default function AboutPage() {
             <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-10">
               <span className="eyebrow">Mission</span>
               <p className="mt-4 font-serif text-2xl leading-relaxed text-light-grey">
-                To transform land into thriving communities and enduring returns
-                through disciplined, sustainable development.
+                To make serviced apartment investment clear, strategic and
+                rewarding for every investor we partner with.
               </p>
             </div>
           </Reveal>
@@ -81,8 +80,9 @@ export default function AboutPage() {
             <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-10">
               <span className="eyebrow">Vision</span>
               <p className="mt-4 font-serif text-2xl leading-relaxed text-light-grey">
-                To be the most trusted name in UK property development and real
-                estate investment — admired for integrity, excellence and impact.
+                To be Edinburgh&apos;s most trusted specialist for serviced
+                apartment investment sourcing — admired for integrity, diligence
+                and clarity.
               </p>
             </div>
           </Reveal>
@@ -139,11 +139,11 @@ export default function AboutPage() {
       <section className="py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeading
-            eyebrow="Leadership Excellence"
-            title="Meet the team transforming land into legacy"
-            description="Decades of combined experience across development, investment, construction and sustainability."
+            eyebrow="Our Team"
+            title="Meet the team behind every opportunity"
+            description="Specialists in Edinburgh property sourcing, investor advisory and serviced apartment investment."
           />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {leadership.map((leader, i) => (
               <Reveal key={leader.name} delay={i}>
                 <div className="group overflow-hidden rounded-2xl border border-gold-100/60 bg-white dark:border-white/10 dark:bg-navy-950">
@@ -184,7 +184,10 @@ export default function AboutPage() {
       </section>
 
       <Credibility />
-      <CTA title="Partner with a developer you can trust" />
+      <CTA
+        title="Partner with a sourcing specialist you can trust"
+        description="Speak with our team about Edinburgh serviced apartment opportunities or book a private consultation."
+      />
     </>
   );
 }

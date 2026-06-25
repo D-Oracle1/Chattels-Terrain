@@ -12,8 +12,8 @@ export function ServicesGrid({ withHeading = true }: { withHeading?: boolean }) 
         {withHeading && (
           <SectionHeading
             eyebrow="What We Do"
-            title="Integrated expertise across the property lifecycle"
-            description="From the first acre to the final handover and beyond, we deliver every discipline under one trusted roof."
+            title="Full-service investment sourcing, end to end"
+            description="From market research to portfolio growth, we handle every stage of the serviced apartment investment journey for you."
           />
         )}
 

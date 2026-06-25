@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-// Self-hosted fonts (via @fontsource) — no external requests, faster + private.
-import "@fontsource/playfair-display/400.css";
-import "@fontsource/playfair-display/600.css";
-import "@fontsource/playfair-display/700.css";
-import "@fontsource/cormorant-garamond/400.css";
-import "@fontsource/cormorant-garamond/500.css";
-import "@fontsource/cormorant-garamond/600.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/manrope/400.css";
-import "@fontsource/manrope/500.css";
-import "@fontsource/manrope/700.css";
+// Self-hosted font (via @fontsource) — no external requests, faster + private.
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/500.css";
+import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat/700.css";
+import "@fontsource/montserrat/800.css";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
@@ -22,7 +15,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.legalName} | Premium Property Development & Investment`,
+    default: `${siteConfig.legalName} | Edinburgh Serviced Apartment Investment Sourcing`,
     template: `%s | ${siteConfig.legalName}`,
   },
   description: siteConfig.description,
@@ -34,7 +27,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: siteConfig.url,
     siteName: siteConfig.legalName,
-    title: `${siteConfig.legalName} | Transforming Land Into Legacy`,
+    title: `${siteConfig.legalName} | Edinburgh Serviced Apartment Investments`,
     description: siteConfig.description,
     images: [
       {
@@ -47,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.legalName} | Transforming Land Into Legacy`,
+    title: `${siteConfig.legalName} | Edinburgh Serviced Apartment Investments`,
     description: siteConfig.description,
     images: ["/og-image.svg"],
   },
@@ -69,13 +62,12 @@ const organizationSchema = {
   email: siteConfig.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: siteConfig.address.line1,
     addressLocality: siteConfig.address.city,
-    postalCode: siteConfig.address.postcode,
+    addressRegion: siteConfig.address.region,
     addressCountry: "GB",
   },
   sameAs: Object.values(siteConfig.social),
-  areaServed: "United Kingdom",
+  areaServed: "Edinburgh, United Kingdom",
 };
 
 export default function RootLayout({

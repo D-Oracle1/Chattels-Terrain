@@ -38,17 +38,16 @@ export default async function ProjectDetailPage({
 
   const facts = [
     { icon: MapPin, label: "Location", value: project.location },
-    { icon: Banknote, label: "Project value", value: project.value },
-    { icon: TrendingUp, label: "Target ROI", value: project.roi },
-    { icon: Calendar, label: "Timeline", value: project.timeline },
+    { icon: Banknote, label: "Price", value: project.value },
+    { icon: TrendingUp, label: "Net yield", value: project.roi },
+    { icon: Calendar, label: "Availability", value: project.timeline },
   ];
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Project",
+    "@type": "Accommodation",
     name: project.name,
     description: project.scope,
-    location: project.location,
     url: `${siteConfig.url}/projects/${project.slug}`,
   };
 
@@ -73,7 +72,7 @@ export default async function ProjectDetailPage({
             href="/projects"
             className="inline-flex items-center gap-2 text-sm text-light-grey/70 transition-colors hover:text-gold-300"
           >
-            <ArrowLeft className="h-4 w-4" /> All projects
+            <ArrowLeft className="h-4 w-4" /> All opportunities
           </Link>
           <span className="mt-6 block text-xs font-semibold uppercase tracking-[0.24em] text-gold-300">
             {project.category} · {project.status}
@@ -109,15 +108,15 @@ export default async function ProjectDetailPage({
         <div className="container-luxe grid gap-16 lg:grid-cols-[1.6fr_1fr]">
           <div>
             <h2 className="heading-lg text-navy dark:text-white">
-              Project overview
+              Opportunity overview
             </h2>
             <p className="lede mt-6">{project.scope}</p>
             <p className="mt-5 leading-relaxed text-charcoal/70 dark:text-light-grey/65">
-              {project.name} exemplifies our commitment to disciplined delivery
-              and sustainable placemaking. From masterplan to handover, the
-              scheme is engineered for long-term value — combining
-              best-in-class design, BREEAM-aligned sustainability and a
-              transparent investment structure.
+              {project.name} has been carefully selected and assessed for its
+              location, demand and yield potential. We package each opportunity
+              with full projections and documentation, and support you from
+              initial enquiry through to ongoing portfolio growth — with complete
+              transparency at every step.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -143,11 +142,11 @@ export default async function ProjectDetailPage({
                 Investment snapshot
               </h3>
               <dl className="mt-6 space-y-4 text-sm">
-                <SnapRow label="Sector" value={project.category} />
+                <SnapRow label="Type" value={project.category} />
                 <SnapRow label="Status" value={project.status} />
-                <SnapRow label="Value" value={project.value} />
-                <SnapRow label="Target ROI" value={project.roi} />
-                <SnapRow label="Timeline" value={project.timeline} />
+                <SnapRow label="Price" value={project.value} />
+                <SnapRow label="Net yield" value={project.roi} />
+                <SnapRow label="Availability" value={project.timeline} />
               </dl>
               <Link
                 href="/contact"
@@ -160,7 +159,10 @@ export default async function ProjectDetailPage({
         </div>
       </section>
 
-      <CTA />
+      <CTA
+        title="Interested in this opportunity?"
+        description="Request the full investment pack or book a consultation with our team."
+      />
     </>
   );
 }
