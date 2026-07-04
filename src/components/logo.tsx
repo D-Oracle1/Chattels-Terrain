@@ -15,14 +15,14 @@ export function Logo({
       className={cn("group inline-flex items-center", className)}
       aria-label="Chattels Terrain — home"
     >
-      {/* logo-light.png = white wordmark for dark surfaces; logo.png = charcoal wordmark for light. */}
+      {/* Gold transparent lockup — reads on both light and dark surfaces. */}
       <Image
         src={light ? "/logo-light.png" : "/logo.png"}
         alt="Chattels Terrain"
-        width={403}
-        height={280}
+        width={636}
+        height={580}
         priority
-        className="h-11 w-auto sm:h-12"
+        className="h-12 w-auto sm:h-14"
       />
     </Link>
   );
