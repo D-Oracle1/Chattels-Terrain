@@ -9,6 +9,7 @@ import { TrustBadges } from "@/components/sections/trust-badges";
 import { Testimonials } from "@/components/sections/testimonials";
 import { InsightsPreview } from "@/components/sections/insights-preview";
 import { InvestorCTA } from "@/components/sections/investor-cta";
+import { Accreditations } from "@/components/sections/accreditations";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
       <Testimonials />
       <InsightsPreview />
       <InvestorCTA />
+      <Accreditations />
     </>
   );
 }

@@ -64,15 +64,6 @@ export function Footer() {
                   {siteConfig.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-4 w-4 shrink-0 text-gold-300" />
-                <a
-                  href={siteConfig.phoneSecondaryHref}
-                  className="hover:text-gold-300"
-                >
-                  {siteConfig.phoneSecondary}
-                </a>
-              </li>
               {siteConfig.emails.map((e) => (
                 <li key={e.address} className="flex items-center gap-3">
                   <Mail className="h-4 w-4 shrink-0 text-gold-300" />

@@ -12,16 +12,11 @@ export const siteConfig = {
   email: "info@chattelsterrain.co.uk",
   phone: "0330 043 1069",
   phoneHref: "tel:+443300431069",
-  phoneSecondary: "0749 502 8383",
-  phoneSecondaryHref: "tel:+447495028383",
-  whatsapp: "+44 7495 028 383",
-  whatsappHref: "https://wa.me/447495028383",
-  // Team & general contact addresses.
+  whatsapp: "0330 043 1069",
+  whatsappHref: "https://wa.me/443300431069",
+  // General contact address.
   emails: [
     { label: "General enquiries", address: "info@chattelsterrain.co.uk" },
-    { label: "Charles", address: "charles@chattelsterrain.co.uk" },
-    { label: "Shaun", address: "shaun@chattelsterrain.co.uk" },
-    { label: "Henry", address: "henry@chattelsterrain.com" },
   ],
   address: {
     line1: "Edinburgh",

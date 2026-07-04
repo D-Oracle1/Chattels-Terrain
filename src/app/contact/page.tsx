@@ -19,12 +19,6 @@ export default function ContactPage() {
       href: siteConfig.phoneHref,
     },
     {
-      icon: Phone,
-      label: "Mobile",
-      value: siteConfig.phoneSecondary,
-      href: siteConfig.phoneSecondaryHref,
-    },
-    {
       icon: MessageCircle,
       label: "WhatsApp",
       value: siteConfig.whatsapp,

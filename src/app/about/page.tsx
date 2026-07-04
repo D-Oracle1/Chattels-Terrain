@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Linkedin } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 import { Credibility } from "@/components/sections/credibility";
 import { CTA } from "@/components/sections/cta";
-import { coreValues, leadership, stats } from "@/lib/data";
+import { coreValues, stats } from "@/lib/data";
 import { AnimatedCounter } from "@/components/animated-counter";
 
 export const metadata: Metadata = {
@@ -131,54 +130,6 @@ export default function AboutPage() {
                 </Reveal>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-24 lg:py-32">
-        <div className="container-luxe">
-          <SectionHeading
-            eyebrow="Our Team"
-            title="Meet the team behind every opportunity"
-            description="Specialists in Edinburgh property sourcing, investor advisory and serviced apartment investment."
-          />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {leadership.map((leader, i) => (
-              <Reveal key={leader.name} delay={i}>
-                <div className="group overflow-hidden rounded-2xl border border-gold-100/60 bg-white dark:border-white/10 dark:bg-navy-950">
-                  <div className="relative aspect-[4/5] overflow-hidden">
-                    <Image
-                      src={leader.image}
-                      alt={leader.name}
-                      fill
-                      sizes="(max-width:768px) 100vw, 25vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <a
-                      href={leader.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${leader.name} on LinkedIn`}
-                      className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-navy opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    >
-                      <Linkedin className="h-4 w-4" />
-                    </a>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-heading text-lg text-navy dark:text-white">
-                      {leader.name}
-                    </h3>
-                    <p className="text-sm font-semibold text-gold-600 dark:text-gold-300">
-                      {leader.role}
-                    </p>
-                    <p className="mt-3 text-sm leading-relaxed text-charcoal/65 dark:text-light-grey/60">
-                      {leader.bio}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>
